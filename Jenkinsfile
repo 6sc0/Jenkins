@@ -2,7 +2,7 @@ pipeline {
   agent any
 
   environment {
-    DOCKER_ID = "fallewi" // Ton DockerHub ID
+    DOCKER_ID = "6sc0" // Ton DockerHub ID
     DOCKER_IMAGE = "datascientestapi"
     DOCKER_TAG = "v.${BUILD_ID}.0"
   }
