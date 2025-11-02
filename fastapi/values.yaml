@@ -1,0 +1,22 @@
+image:
+  repository: 6sc0/datascientestapi  # remplace par ton propre DockerHub si besoin
+  pullPolicy: IfNotPresent
+  tag: ""
+
+service:
+  type: NodePort
+  port: 80
+
+ingress:
+  enabled: false
+
+resources: {}
+
+autoscaling:
+  enabled: false
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
