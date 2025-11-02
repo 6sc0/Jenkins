@@ -26,3 +26,6 @@ serviceAccount:
   name: ""
 
 replicaCount: 1
+
+httpRoute:
+  enabled: false
