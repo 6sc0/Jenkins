@@ -20,3 +20,9 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+serviceAccount:
+  create: true
+  name: ""
+
+replicaCount: 1
