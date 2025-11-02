@@ -27,7 +27,7 @@ pipeline {
         script {
           sh '''
             echo "[INFO] Running container for test..."
-            docker run -d -p 8080:80 --name jenkins $DOCKER_ID/$DOCKER_IMAGE:$DOCKER_TAG || (echo "[ERROR] Port 80 already in use. Using 8080 instead." && exit 1)
+            docker run -d -p 8083:80 --name jenkins $DOCKER_ID/$DOCKER_IMAGE:$DOCKER_TAG || (echo "[ERROR] Port 80 already in use. Using 8080 instead." && exit 1)
             sleep 5
           '''
         }
@@ -39,7 +39,7 @@ pipeline {
         script {
           sh '''
             echo "[INFO] Performing health check..."
-            curl --fail http://localhost:8080 || (echo "[ERROR] Curl test failed!" && docker logs jenkins && exit 1)
+            curl --fail http://localhost:8083 || (echo "[ERROR] Curl test failed!" && docker logs jenkins && exit 1)
           '''
         }
       }
